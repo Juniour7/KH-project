@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.top__menu {
+    background-color: #fff;
+    padding: 10px;
+    width: 87%;
+}
+
+.top__menu__container {
+    display: flex;
+    width: 60%;
+}
+
+.logo__container {
+    display: flex;
+}
+
+.img__logo__container {
+    width: 100%;
+}
+
+.church__logo {
+    width: 100%;
+}
+
+.logo__text {
+    color: #052252;
+    font-weight: 900;
+}
+
+.menu__bar {
+    display: none;
+}
+
+hr {
+    height: 10px;
+    background-color: #052252;
+}
+
+.preview__image__container {
+    width: 87%;
+    height: 200px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.preview__image {
+    width: 100%;
+}
+
+.intro__text {
+    width: 85%;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.key__text {
+    margin: 5px auto;
+    font: 30px;
+    font-weight: 1000;
+    color: #052252;
+}
+
+.aside__bar {
+    background-color: #0A6EBD;
+    margin: 0px;
+    padding: 0px;
+    width: 50px;
+    position: fixed;
+    height: 100%;
+    overflow-x: hidden;
+    z-index: 1;
+    top: 0;
+    right: 0;
+}
+
+.aside__logo__container {
+    width: 10px;
+    height: 10px;
+    margin: 100px auto;
+}
+
+.aside__logo {
+    width: 100%;
+}
+
+.presentation__img__container {
+    margin-left: 12px;
+    margin-top: 70px;
+    height: 600px;
+    width: 300px;
+}
+
+.presentation__img {
+    width: 100%;
+}
+
+.presentation__img__container {
+    margin: 10px;
+}
+
+.presentation__text__container {
+    width: 87%;
+}
+
+.date__text__container {
+    width: 87%;
+    text-align: center;
+}
+
+.date__text {
+    font-weight: 1000;
+    font-size: 26px;
+}
+
+.vision__text__container {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.values__text {
+    font-size: 20px;
+    color: #4A4A4A;
+}
+
+.mission__text__container {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .menu__bar {
+        display: flex;
+        gap: 15px;
+        font-size: 16px;
+        flex-wrap: wrap;
+    }
+
+    .menu__bar__button {
+        background-color: #fff;
+        border: none;
+    }
+    
+    .top__menu__container {
+        width: 35%;
+    }
+
+    .img__logo__container {
+        height: 70px;
+        width: 75%;
+        margin-left: 5px;
+        margin-top: 3px;
+    }
+
+    .church__logo {
+        width: 100%;
+    }
+
+    .logo__text {
+        font-weight: 900;
+        font-size: 20px;
+    }
+
+   .preview__image__container {
+    width: 93.5%;
+   }
+
+   .presentation__img__container {
+    margin-left: 15px;
+    margin-top: 200px;
+    width: 90%;
+   }
+}
