@@ -1,176 +1,1734 @@
-* {
+*{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.top__menu {
-    background-color: #fff;
-    padding: 10px;
-    width: 87%;
+/*----------------------Header----------------------*/
+#header {
+    background: #007681;
+    width: 100%;
+    height: 70px;
 }
 
-.top__menu__container {
+.bar {
     display: flex;
-    width: 60%;
+    justify-content: space-between;
 }
 
-.logo__container {
-    display: flex;
-}
-
-.img__logo__container {
+.logo {
+    height: 100%;
     width: 100%;
 }
 
-.church__logo {
-    width: 100%;
+.logo_con {
+    width: 175px;
+    height: 50px;
+    margin: 13px 10px;
 }
 
-.logo__text {
-    color: #052252;
-    font-weight: 900;
-}
-
-.menu__bar {
+.nav_lg {
     display: none;
 }
 
-hr {
-    height: 10px;
-    background-color: #052252;
-}
-
-.preview__image__container {
-    width: 87%;
-    height: 200px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.preview__image {
-    width: 100%;
-}
-
-.intro__text {
-    width: 85%;
-    margin-top: 0px;
-    text-align: center;
-}
-
-.key__text {
-    margin: 5px auto;
-    font: 30px;
-    font-weight: 1000;
-    color: #052252;
-}
-
-.aside__bar {
-    background-color: #0A6EBD;
-    margin: 0px;
-    padding: 0px;
-    width: 50px;
-    position: fixed;
+.toggle_btn {
     height: 100%;
-    overflow-x: hidden;
-    z-index: 1;
-    top: 0;
-    right: 0;
+    margin: 25px 20px;
 }
 
-.aside__logo__container {
-    width: 10px;
-    height: 10px;
-    margin: 100px auto;
+.toggle_btn .fa-solid{
+    font-size: 2rem;
 }
 
-.aside__logo {
+.ministries_menu {
+    display: none;
+}
+
+/*----------DROPDOWN----------*/
+.topnav a {
+    float: left;
+    text-decoration: none;
+    color: #322a53;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 15px;
+    position: relative;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #052252;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    outline-offset: none;
+}
+
+#check {
+    display: none;
+}
+
+.dropdown_menu {
+    position: absolute;
+    right: 2rem;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 250px;
+    background: #59D5E0;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    z-index: 999;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 25px;
+    transition: all .5s;
+}
+
+#check:checked ~ .dropdown_menu{
+    right: 10px;
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu ul li:hover > ul {
+    display: block;
+}
+
+.ex_dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 0;
+}
+
+/*-------SLIDESHOW-----------*/
+.container {
+    padding: 1.5rem;
     width: 100%;
 }
 
-.presentation__img__container {
-    margin-left: 12px;
-    margin-top: 70px;
-    height: 600px;
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0px auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
     width: 300px;
+    height: 220px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
 }
 
-.presentation__img {
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    animation: slide 16s infinite;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+/*-------------Introduction-----------------------*/
+
+#intro {
+    width: 100%;
+    font-family: "Aladin", system-ui;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #007681;
+}
+
+.intro_img img {
+    height: 100%;
     width: 100%;
 }
 
-.presentation__img__container {
-    margin: 10px;
+.intro_img {
+    height: 800px;
+    position: absolute;
 }
 
-.presentation__text__container {
-    width: 87%;
+.intro_text {
+    position: relative;
 }
 
-.date__text__container {
-    width: 87%;
-    text-align: center;
+p {
+    color: #007681;
+    font-size: 18px;
 }
 
-.date__text {
-    font-weight: 1000;
-    font-size: 26px;
+div span a i {
+    margin: 20px 0px;
+    border: 7px solid #007681;
+    border-radius: 50%;
+    padding: 25px;
+    transition: transform 0.5s;
 }
 
-.vision__text__container {
-    margin-top: 15px;
-    margin-bottom: 10px;
-    text-align: center;
+div span a i:hover {
+    transform: scale(1.1);
+    border: 7px solid #007681;
+    cursor: pointer;
 }
 
-.values__text {
+hr {
+    width: 90%;
+    margin: 20px auto;
+}
+
+/*-----------UPCOMING EVENTS-----------------*/
+#events {
+    margin: 70px 0;
+}
+
+.events_image {
+    width: 85%;
+    height: 420px;
+    margin: 0 auto;
+}
+
+.events_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.actual_events {
+    width: 85%;
+    margin: 20px auto;
+}
+
+.actual_events h1 {
+    font-size: 30px;
+    font-weight: 900;
+    font-family: "Poppins", sans-serif;
+}
+
+.upcoming_events {
+    display: flex;
+    justify-content: space-between;
+    background: #176B87;
+    color: white;
+    width: 100%;
+    height: 70px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.upcoming_events h2 {
+    width: 70%;
+    background: none;
+    font-size: 18px;
+    margin: auto 0px;
+}
+
+.upcoming_events h3 {
     font-size: 20px;
-    color: #4A4A4A;
+    color: #F0B323;
 }
 
-.mission__text__container {
+.values {
+    margin-top: 20px;
+}
+
+.values h1 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.values p {
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+
+/*----------------------------Media Section-------------------------*/
+#media {
+    font-family: "Aladin", system-ui;
+    margin: 20px 20px;
+}
+
+.title_con {
+    color: #007681;
+    height: 47px;
+    padding: 5px auto;
+}
+
+.media_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.media_card h2 {
+    color: #007681;
+    padding: 7px;
+    margin: 20px 0px;
+}
+
+.media_title {
+    color: #F0B323;
+    font-size: 20px;
+    margin-left: 110px;
+    margin-bottom: 20px;
+}
+
+.media_card iframe {
+    width: 350px;
+    height: 250px;
+    border: none;
+}
+
+.media_cadrd iframe:hover {
+    cursor: pointer;
+}
+
+/*-----------------Sabbath School----------*/
+.sabbath_container {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.sabbath_school {
+    background-image: url(https://adventistbookcenter.com/media/catalog/category/Sabbath_School_Category_Page_Banner.jpg);
+    width: 80%;
+    height: 350px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 20px;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.sabbath_links {
+    position: absolute;
+    color: white;
+    display: flex;
+    bottom: 0;
+    left: 0;
+}
+
+.sabbath_links a {
+    text-decoration: none;
+}
+
+.sabbath_links a button {
+    background: transparent;
+    border: 2px solid #007681;
+    padding: 10px 15px;
+    color: #007681;
+    font-size: 18px;
+    border-radius: 50px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: color 1s;
+}
+
+.sabbath_links a button:hover {
+    color: #F0B323;
+}
+
+/*----------------------------Welcoming Section--------------------------*/
+#welcome {
+    background: #052252;
+    width: 100%;
+    height: 350px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0px;
+}
+
+.welcome_con {
+    width: 80%;
+    margin: 0px auto;
+    height: 100%;
+    text-indent: 50px;
+}
+
+.welcome_title {
+    font-family: "Amethysta", serif;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.welcome_text {
+    color: #fff;
+    margin: 20px 0px;
+    font-size: 15px;
+}
+
+/*----------------Dedication Form---------*/
+.child_container {
+    background: #007681;
+    width: 100%;
+    font-family: "Noto Sans", sans-serif;
+    padding: 10px 0;
+}
+
+.child_details {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.child_image {
+    width: 320px;
+    height: 45px;
+    justify-content: center;
+}
+
+.child_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.child_insp p {
+    margin: 10px 0;
+    text-align: center;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.part2 {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.part2 p a {
+    text-decoration: none;
+    color: #F0B323;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.child_insp h1 {
+    color: #F0B323;
+    font-size: 18px;
+    display: inline-flex;
+}
+
+/*---------------Our Leaders-------------*/
+#Leaders_container {
+    background: #EDEDED;
+    width: 100%;
+    padding: 20px auto;
+}
+
+.leader_title {
+    font-family: "Aladin", system-ui;
+    width: 95%;
+    margin: 0 auto;
+    color: #007681;
+    font-size: 40px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+
+.leader_image {
+    width: 65%;
+    height: 270px;
+    margin: 20px auto;
+}
+
+.leader_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.leader_details {
+    padding-bottom: 20px;
+}
+
+.leader_name {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    font-family: "Madimi One", sans-serif;
+    font-size: 12px;
+    color: #007681;
+}
+
+.leader_name p {
+    color: #F0B323;
+}
+
+.leader_name h3 {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/*-----------Prayer Request-------------------*/
+.prayer_container {
+    background-image: url(https://images.unsplash.com/photo-1629338789670-630e71caea04?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 450px;
+}
+
+.prayer {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    line-height: 1.25rem;
+}
+
+.prayer h1 {
+    padding: 50px 0px;
+    font-family: "Aladin", system-ui;
+    font-size: 48px;
+    color: #F0B323;
+}
+
+.prayer h3 {
+    color: #007681;
+    font-size: 20px;
+}
+
+.prayer_icon a {
+   color: #007681;
+   transition: color .5s;
+}
+
+.prayer_icon a:hover {
+    color: #F0B323;
+}
+
+.prayer_icon span {
+    font-size: 100px;
+    color: #F0B323;
+    margin: 20px 0;
+}
+
+.prayer_icon a {
+    text-decoration: none;
+    color: #F0B323;
+    font-size: 25px;
+    margin: 20px 0;
+    transition: color .5s;
+}
+
+.prayer_icon a:hover {
+    color: #007681;
+    cursor: pointer;
+}
+
+.prayer_icon span i {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/*------------------------------Ministries Logos------------------------*/
+#ministry {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    gap: 35px;
+    width: 100%;
+}
+
+.ministry_title {
+    width: 125px;
+    height: 45px;
+    padding: 7px;
+    margin-left: 100px;
+    background: #ee044e;
+    font-family: "Aladin", system-ui;
+    font-weight: 400;;
+}
+
+.ministry_logo {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-family: "Amethysta", serif;
+    font-size: 15px;
+    margin: 20px 0px;
+}
+
+.m_logo {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+.m_logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/*-----------------------Contact------------------------------*/
+#contact {
+    background: #EDEDED;
+    margin-top: 35px;
+    width: 100%;
+    height: 450px;
+}
+
+.contact_icon span {
+    display: flex;
+    color: #322a53;
+    margin-bottom: 25px;
+    gap: 10px;
+    animation-delay: 1s;
+}
+
+.contact_title {
+    background: #052252;
+    color: #fff;
+    width: 100px;
+    height: 35px;
+    font-family: "Aladin", system-ui;
+    padding: 0px 2px;
+    margin-left: 100px;
+    animation-delay: 0.5s;
+}
+
+.contact_button {
+    width: 50%;
+    margin: 15px 15px;
+}
+
+.text_button {
+    margin-bottom: 35px;
+}
+
+.btn_primary {
+    background: #052252;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.btn_primary:hover {
+    cursor: pointer;
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*---------------------------------Contact Page---------------------------*/
+#reach_out {
+    background: #F8F8F8;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.contact_header {
+    width: 80%;
+    padding: 50px 0;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 30px;
+} 
+
+.contact_container {
+    width: 100%;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.contact_left {
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.contact_left form input {
+    background: transparent;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #052252;
+    width: 100%;
+    height: 30px;
+    padding: 5px 10px;
+    margin: 15px auto;
+    
+}
+
+.contact_left form textarea {
+    display: block;
+    background: transparent;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #052252;
+}
+
+.contact_left form input.btn_contact {
+    background: #052252;
+    color: white;
+    font-size: 17px;
+    padding: 2px 3px;
+    margin-top: 20px;
+    width: 80px;
+    border-radius: 5px;
+    transition: background 1s;
+}
+
+.contact_left form input.btn_contact:hover {
+    cursor: pointer;
+    background: white;
+    color: #007681;
+}
+
+.contact_right {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contact_right iframe {
+    width: 330px;
+    height: 200px;
+    margin: 0px auto;
+}
+
+/*-----------------------Resource Center-------------------------*/
+#Resource_center {
+    width: 100%;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.resource_heading {
+    background: #ff004f;
+    width: 150px;
+    height: 40px;
+    font-family: "Aladin", system-ui;
+    color: #EDEDED;
+    padding: 5px 5px;
+    margin-left: 100px;
+}
+
+.book_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.book_image {
+    width: 300px;
+    height: 400px;
+    margin-top: 25px;
+}
+
+section .book_container img {
+    width: 100%;
+    height: 100%;
+}
+
+section .book_container .book_image a button{
+    color: #176B87;
+    border: 2px solid #176B87;
+    background: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+
+section .book_container .book_image a button:hover {
+    cursor: pointer;
+}
+
+/*-------------Church Library--------------------------*/
+.manual {
+    width: 100%;
+    margin: 20px auto;
+    font-family: "Noto Serif", serif;
+    justify-content: space-evenly;
+}
+
+.manual_container {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.manual_title {
+    height: 300px;
+}
+
+.manual_title img {
+    width: 100%;
+    height: 100%;
+}
+
+.manual h1 {
+    font-family: "Noto Sans", sans-serif;
     text-align: center;
 }
 
-@media (min-width: 768px) {
-    .menu__bar {
-        display: flex;
-        gap: 15px;
-        font-size: 16px;
-        flex-wrap: wrap;
+.manual_btn {
+    padding: 10px 25px;
+    margin: 10px 0px;
+    background: #052252;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.manual_content h2 {
+    width: 100%;
+    background: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.manual_content p {
+    font-family: "ubuntu";
+    margin: 20px 0px;
+}
+
+.beliefs {
+    background: #052252;
+    width: 75%;
+    height: 250px;
+    padding: 10px 15px;
+    margin: 0px auto;
+    border: 0;
+    border-radius: 25px;
+    box-shadow: 0 25px 10px -12px rgb(0 0 0 / 0.25);
+}
+
+.beliefs a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.beliefs a:hover {
+    color: #ff004f;
+}
+
+.beliefs a h2 {
+    background: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+.beliefs p {
+    color: #fff;
+    font-size: 15px;
+}
+
+.req_form {
+    font-family: "ubuntu";
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 70px;
+}
+
+.req_form form input{
+    padding: 10px 7px;
+    border: 0;
+    background: #CCCCCC;
+    color: #052252;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.req_form form input .form_button{
+    padding: 10px 5px;
+    background: #052252;
+    color: #CCCCCC;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/*-----------------------Footer---------------------------*/
+#footer {
+    background: #000000;
+    width: 100%;
+    height: 700px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.footer_title {
+    font-family: "Open Sans", sans-serif;
+    color: #777777;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#footer .bottom .contact_icon span{
+    color: #CCCCCC;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.bottom {
+    height: 350px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.mission {
+    width: 90%;
+    color: #CCCCCC;
+}
+
+.footer_txt {
+    color: #CCCCCC;
+    font-size: 14px;
+}
+
+.location iframe {
+    width: 90%;
+    height: 200px;
+}
+
+/*---------------------------------------Copyright-----------------------------------*/
+.copyright {
+    background: #007681;
+    font-family: "Montserrat", sans-serif;
+    color: #F0B323;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*---------------Prayer-------------*/
+.nav_img {
+    width: 100%;
+    height: 300px;
+}
+
+.nav_img img {
+    width: 100%;
+    height: 100%;
+}
+
+/*------------About Page----------*/
+.about-header {
+    background-image: url(./church\ figs/10.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 220px;
+}
+
+.about-header img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.about-header h1 {
+    color: #052252;
+    font-size: 24px;
+    margin: 10px 15px;
+}
+
+.about_con {
+    width: 90%;
+    margin: 0px auto;
+    font-family: "Noto Sans", sans-serif;
+    line-height: 1.625;
+}
+
+.about_content h3 {
+    color: #052252;
+    font-family: "Aladin", system-ui;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.about_content ol {
+    list-style-type: disc;
+    color: #777777;
+    margin-left: 20px;
+}
+
+/*------AMBASSADORS PAGE-----------*/
+.ambtitle_img {
+    background-image: url(./Assets/IMG-20240224-WA0022.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position: fixed;
+    width: 80%;
+    height: 350px;
+    margin: 50px auto;
+    box-shadow: 5px 5px 5px 5px gray;
+}
+
+.amb {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.amb_intro {
+    font-family: "ubuntu";
+    margin: 10px 0px;
+    line-height: 1.625;
+}
+
+.amb_title {
+    display: flex;
+    gap: 10px;
+}
+
+.title-img {
+    width: 50px;
+    height: 50px;
+}
+
+.title-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.amb_title h1 {
+    font-family: "Aladin", system-ui;
+}
+
+.leader_title {
+    font-family: "Aladin", system-ui;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.amb_intro p {
+    margin-bottom: 5px;
+}
+
+.amb_img {
+    width: 100%;
+    height: 100%;
+}
+
+.img_con {
+    width: 70%;
+    margin: 0px auto;
+}
+
+.leader_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 70%;
+}
+
+.leader_img_con {
+    width: 80px;
+    height: 70px;
+}
+
+.leader_ttle_con {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leader_con {
+    background: #DBE2EF;
+    width: 75%;
+    margin: 10px auto;
+    padding: 10px 10px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius: 20px;
+}
+
+.leader_con p {
+    margin: 10px 0px;
+}
+
+.leader_details {
+    text-align: end;
+    color: #777777;
+}
+
+/*---------BULLETIN'S PAGE----------*/
+.bulletin_file {
+    width: 90%;
+    margin: 15px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.bulletin_file a {
+    border: 2px solid #052252;
+    border-radius: 10px;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #322a53;
+    font-weight: bold;
+    transition: background 1s;
+}
+
+.calendar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.calendar i {
+    font-size: 1.5rem;
+    color: #176B87;
+}
+
+.calendar h4 {
+    color: #071257;
+    font-size: 15px;
+    font-family: "Aladin", system-ui;
+}
+
+.bulletin_image {
+    width: 320px;
+    height: 200px;
+}
+
+.bulletin_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.btn_a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_a a:hover {
+    background: #052252;
+    color: #CCCCCC;
+}
+
+/*--------------Dedication Form----------------*/
+#dedication_body {
+    background: #F8F8F8;
+}
+
+.dedication_form {
+    width: 80%;
+    margin: 50px auto;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.dedication_form form input {
+    background: rgb(214, 205, 205);
+    padding: 7px 10px;
+    border: none;
+    font-size: 20px;
+    outline: none;
+}
+
+.dedication_form form input.dedication_btn {
+    background: #176B87;
+    color: white;
+    width: 100px;
+    cursor: pointer;
+    transition: background 1.5s;
+}
+
+.dedication_form form input.dedication_btn:hover {
+    background: white;
+    color: #176B87;
+}
+
+/*---------Benevolence Form--------------*/
+.form_details {
+    font-family: "Montserrat", sans-serif;
+    width: 90%;
+    margin: 50px auto;
+    line-height: 25px;
+}
+
+.form_details h1 {
+    margin: 10px 0;
+}
+
+.form_details ol li {
+    font-size: 18px;
+}
+
+.form_details ol li ol {
+    margin-left: 40px;
+}
+
+/*----------------Tablet and iPad Screens-------------------------*/
+@media only screen and (min-width: 768px) {
+    #header {
+        height: 100px;
     }
 
-    .menu__bar__button {
-        background-color: #fff;
-        border: none;
+    .logo_con {
+        width: 240px;
+        height: 70px;
+    }
+
+    #check {
+        display: none;
     }
     
-    .top__menu__container {
-        width: 35%;
+    .checkbtn {
+        display: none;
     }
 
-    .img__logo__container {
-        height: 70px;
-        width: 75%;
-        margin-left: 5px;
-        margin-top: 3px;
+    .nav_lg li {
+        display: inline-block;
     }
 
-    .church__logo {
+    .topnav {
+        margin: auto 0px;
+    }
+    
+    .topnav a {
+        float: left;
+        text-decoration: none;
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 400;
+        margin-left: 15px;
+        position: relative;
+    }
+    
+    .topnav a::after {
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #4E3629;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: all 0.5s;
+    }
+    
+    .topnav a.active::after {
+        width: 100%;
+        height: 3px;
+        background: #4E3629;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+    }
+    
+    .topnav a:hover::after {
         width: 100%;
     }
 
-    .logo__text {
-        font-weight: 900;
+    .btn {
+        background: #322a53;
+        color: #fff;
+        padding: 5px 25px;
+        margin: 0px 10px;
+        border-radius: 5px;
+        border: none;
+        transition: transform 0.5s;
+    }
+    
+    .btn:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    .ministries_menu {
+        display: block;
+        display: inline-block;
+        background: gray;
+        color: #EEF5FF;
+        width: 200px;
+        align-items: center;
+        padding: 20px 10px;
+        z-index: -1;
+    }
+
+    .ministries_menu li {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.4rem;
+    }
+
+    .nav_lg ul {
+        list-style-type: none;
+        background: #F0B323;
+    }
+
+    .nav_lg ul li {
+        display: inline-block;
+        position: relative;
+    }
+
+    .nav_lg ul li a {
+        display: block;
+        padding: 10px 25px;
+        color: #FFF;
+        text-decoration: none;
         font-size: 20px;
     }
 
-   .preview__image__container {
-    width: 93.5%;
-   }
+    .dropdown {
+        width: 310px;
+        background: #F0B323;
+        color: white;
+        position: absolute;
+        z-index: 999;
+        display: none;
+        transition: all .5s;
+    }
 
-   .presentation__img__container {
-    margin-left: 15px;
-    margin-top: 200px;
-    width: 90%;
-   }
+    .dropdown li {
+        display: flex;
+    }  
+
+    .min:hover  ul.dropdown{
+        display: block;
+        transition: all 1.5s;
+    }
+
+    /*----------SLIDESHOW----------------*/
+    .slider-wrapper {
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+
+    .slider {
+        width: 100%;
+        height: 400px;
+    }
+
+    /*--------Upcoming Events-----------*/
+    .events_container {
+        justify-content: center;
+    }
+
+    .events_image {
+        height: 750px;
+        flex-basis: 45%;
+    }
+
+    .actual_events {
+        flex-basis: 40%;
+        text-align: center;
+    }
+
+    .upcoming_events h2 {
+        font-size: 25px;
+    }
+
+    .actual_events h1 {
+        font-size: 42px;
+    }
+
+    #welcome {
+        height: 200px;
+    }
+
+    /*------------Media Section-----------*/
+    .media_wrap {
+        display: block;
+    }
+
+    .media_card h2 {
+        color: #007681;
+        font-size: 20px;
+        padding: 2px;
+        margin: 20px 0px;
+    }
+
+    .media_card iframe {
+        width: 100%;
+        height: 450px;
+    }
+
+    /*-----------Dedication Form--------*/
+    .child_container {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 20px;
+        padding-bottom: 20px;
+        height: 300px;
+    }
+
+    .child_details {
+        flex-basis: 70%;
+    }
+
+    .child_insp {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .child_insp p {
+        text-align: left;
+    }
+
+    .part2 {
+        padding-top: 50px;
+        flex-basis: 40%;
+    }
+
+    .child_image {
+        width: 550px;
+        height: 70px;
+        margin: 0 auto;
+    }
+
+    /*---------Our Leaders-----------*/
+    .leader_container {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .leader_image {
+        width: 370px;
+        height: 350px;
+        border: 30px solid white;
+    }
+
+    /*---------Ministries Logo-----------*/
+    .ministry_logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    /*----Library Page------*/
+    .manual {
+        display: flex;
+    }
+
+    .manual_container {
+        width: 50%;
+    }
+
+    .manual_title  {
+        height: 600px;
+        width: 100%;
+    }
+
+    .beliefs {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .form_container {
+        gap: 3px;
+        flex-basis: 40%;
+    }
+
+    /*---------Dedication Page-----------*/
+    .dedication_container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .dedication_input {
+        width: 500px;
+        border-radius: 0px;
+        margin: 10px 10px;
+    }
+
+    #date_of_birth {
+        width: 100%;
+    }
+
+    /*----Footer------*/
+    #footer {
+        height: 350px;
+    }
+
+    .mission {
+        width: 400px;
+    }
+
+    .bottom {
+        height: 350px;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /*--------About Page---------*/
+    .about-header {
+        height: 350px;
+    }
+
+    .about_con {
+        width: 80%;
+    }
+
+    .about_content p {
+        font-size: 15px;
+        color: #777777;
+    }
+
+    /*----------Library Page--------*/
+    .beliefs {
+        width: 80%;
+    }
+
+    /*--------AMBASSADORS PAGE-----------*/
+    .amb {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+
+    .amb_intro {
+        flex-basis: 60%;
+    }
+
+    .img_con {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        height: 300px;
+    }
+
+    .img0 {
+        width: 200px;
+        height: 150px;
+        margin-top: 50px;
+    }
+
+    .img1 {
+        width: 200px;
+        height: 150px;
+    }
+
+    .img2 {
+        width: 250px;
+        height: 200px;
+    }
+
+    .leader {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 2px;
+    }
+
+    .leader_con {
+        width: 40%;
+    }
+
+    /*--------Bulletin Page--------*/
+    .bulletin_container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .bulletin_file {
+        width: 300px;
+    }
+
+    .bulletin_image {
+        width: 300px;
+        height: 200px;
+    }
+
+    /*-------CONTACT PAGE-------*/
+    .page {
+        display: flex;
+    }
+
+    /*-------------Contact Page*/
+    .contact_container {
+        display: flex;
+    }
+
+    .contact_right iframe{
+        width: 500px;
+        height: 350px;
+    }
+}
+
+/*-------------Desktop and Large Screens----------------------*/
+@media only screen and (min-width: 1024px) {
+    .nav_lg {
+        display: block;
+    }
+
+    /*----------SLIDESHOW----------------*/
+    .slider-wrapper {
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+
+    .slider {
+        width: 100%;
+        height: 100svh;
+    }
+
+    /*----------SLIDESHOW----------------*/
+    .slider-wrapper {
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+
+    .slider {
+        width: 100%;
+        height: 600px;
+    }
+
+    /*--------Upcoming Events-----------*/
+    .events_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .events_image {
+        height: 650px;
+        flex-basis: 37%;
+    }
+
+    .actual_events {
+        flex-basis: 40%;
+        text-align: center;
+    }
+
+    .upcoming_events h2 {
+        font-size: 25px;
+    }
+
+    .actual_events h1 {
+        font-size: 42px;
+    }
+       
+    /*----------Media Section----------*/
+    .media_wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .media_card h2{
+        font-size: 30px;
+    }
+
+    .media_card iframe {
+        width: 450px;
+        height: 370px;
+    }
+
+    /*-------------Footer------------------*/
+    .bottom {
+        display: flex;
+    }
+
+    .location iframe {
+        width: 400px;
+        height: 250px;
+    }
 }
