@@ -71,4 +71,8 @@ body {
     .amb_details h1 {
         font-size: 35px;
     }
+
+    .media {
+        width: 100%;
+    }
 }
