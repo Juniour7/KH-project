@@ -1,0 +1,74 @@
+body {
+    padding: 0px    ;
+}
+
+/*------Ambassadors Choir-------*/
+.ambassador_card {
+    background-color: #F6F5F2;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.amb_pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.amb_pic {
+    width: 300px;
+    height: 190px;
+    margin: 0 auto;
+}
+
+.amb_details {
+    line-height: 28px;
+}
+
+.amb_details h1{
+    font-family: "Aladin", system-ui;
+    font-size: 25px;
+    font-weight: 200;
+    color: #F0B323;
+}
+
+.amb_details h3 {
+    font-family: "Aladin", system-ui;
+    font-size: 27px;
+    font-weight: 200;
+    margin-top: 20px;
+    color: #F0B323;
+}
+
+.amb_details ul {
+    font-family: "Poppins", sans-serif;
+    list-style-type: none;
+    font-size: 18px;
+}
+
+.amb_details p {
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+    font-weight: 100;
+    margin-top: 20px;
+    color: black;
+}
+
+@media only screen and (min-width: 768px) {
+    .ambassador_card {
+        display: flex;
+        padding: 20px;
+        width: 90%;
+        margin: 40px auto;
+        gap: 30px;
+    }
+
+    .amb_pic {
+        width: 85%;
+        height: 370px;
+    }  
+    
+    .amb_details h1 {
+        font-size: 35px;
+    }
+}

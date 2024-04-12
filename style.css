@@ -536,12 +536,12 @@ hr {
 
 /*-----------Prayer Request-------------------*/
 .prayer_container {
-    background-image: url(https://images.unsplash.com/photo-1629338789670-630e71caea04?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(https://images.unsplash.com/photo-1554147090-e1221a04a025?q=80&w=1448&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 450px;
+    height: 500px;
 }
 
 .prayer {
@@ -554,7 +554,7 @@ hr {
 .prayer h1 {
     padding: 50px 0px;
     font-family: "Aladin", system-ui;
-    font-size: 48px;
+    font-size: 40px;
     color: #F0B323;
 }
 
@@ -581,7 +581,7 @@ hr {
 .prayer_icon a {
     text-decoration: none;
     color: #F0B323;
-    font-size: 25px;
+    font-size: 22px;
     margin: 20px 0;
     transition: color .5s;
 }
@@ -594,8 +594,8 @@ hr {
 .prayer_icon span i {
     width: 100%;
     height: 100%;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-bottom: 30px;
 }
 
 /*------------------------------Ministries Logos------------------------*/
@@ -943,44 +943,53 @@ section .book_container .book_image a button:hover {
 
 /*-----------------------Footer---------------------------*/
 #footer {
+    font-family: "Montserrat", sans-serif;
     background: #000000;
+    color: white;
     width: 100%;
     height: 700px;
-    font-family: "Montserrat", sans-serif;
+    padding: 10px;
 }
 
-.footer_title {
-    font-family: "Open Sans", sans-serif;
-    color: #777777;
-    font-size: 20px;
-    margin-bottom: 20px;
+.connect {
+    line-height: 30px;
 }
 
-#footer .bottom .contact_icon span{
-    color: #CCCCCC;
-    font-size: 14px;
-    font-weight: 100;
+.connect h1 {
+    font-size: 18px;
+    color: #F0B323;
 }
 
-.bottom {
-    height: 350px;
-    width: 80%;
-    margin: 20px auto;
+.address h2 {
+    font-size: 16px;
 }
 
-.mission {
-    width: 90%;
-    color: #CCCCCC;
+.address p {
+    font-size: 18px;
 }
 
-.footer_txt {
-    color: #CCCCCC;
-    font-size: 14px;
+.service {
+    padding-top: 20px;
+    line-height: 30px;
 }
 
-.location iframe {
-    width: 90%;
-    height: 200px;
+.service h1 {
+    font-size: 18px;
+    color: #F0B323;
+}
+
+.servicep {
+    font-size: 18px;
+}
+
+.links {
+    line-height: 30px;
+    padding-top: 20px;
+}
+
+.links h1 {
+    font-size: 18px;
+    color: #F0B323;
 }
 
 /*---------------------------------------Copyright-----------------------------------*/
@@ -1289,7 +1298,7 @@ section .book_container .book_image a button:hover {
         float: left;
         text-decoration: none;
         color: #FFF;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 400;
         margin-left: 15px;
         position: relative;
@@ -1298,18 +1307,18 @@ section .book_container .book_image a button:hover {
     .topnav a::after {
         content: '';
         width: 0;
-        height: 3px;
-        background: #4E3629;
+        height: 4px;
+        background: #F0B323;
         position: absolute;
         left: 0;
         bottom: -6px;
-        transition: all 0.5s;
+        transition: all 1.0s;
     }
     
     .topnav a.active::after {
         width: 100%;
-        height: 3px;
-        background: #4E3629;
+        height: 4px;
+        background: #F0B323;
         position: absolute;
         left: 0;
         bottom: -6px;
@@ -1355,7 +1364,7 @@ section .book_container .book_image a button:hover {
 
     .nav_lg ul {
         list-style-type: none;
-        background: #F0B323;
+        background: white;
     }
 
     .nav_lg ul li {
@@ -1366,30 +1375,28 @@ section .book_container .book_image a button:hover {
     .nav_lg ul li a {
         display: block;
         padding: 10px 25px;
-        color: #FFF;
+        color: #007681;
         text-decoration: none;
         font-size: 20px;
     }
 
     .dropdown {
-        width: 310px;
-        background: #F0B323;
-        color: white;
+        width: 290px;
         position: absolute;
+        border-radius: 20px;
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        top: 60px;
         z-index: 999;
         display: none;
-        transition: all .5s;
     }
 
     .dropdown li {
         display: flex;
     }  
 
-    .min:hover  ul.dropdown{
+    .min:hover > ul.dropdown{
         display: block;
-        transition: all 1.5s;
     }
-
     /*----------SLIDESHOW----------------*/
     .slider-wrapper {
         max-width: 70rem;
@@ -1489,15 +1496,24 @@ section .book_container .book_image a button:hover {
     }
 
     .leader_image {
-        width: 370px;
-        height: 350px;
-        border: 30px solid white;
+        width: 360px;
+        height: 400px;
+        border: 10px solid white;
     }
 
     /*---------Ministries Logo-----------*/
     .ministry_logo {
         width: 200px;
         height: 200px;
+    }
+
+    /*--------------------Prayer Request--------*/
+    .prayer_container {
+        height: auto;
+    }
+
+    .prayer {
+        padding-bottom: 40px;
     }
 
     /*----Library Page------*/
@@ -1544,18 +1560,22 @@ section .book_container .book_image a button:hover {
 
     /*----Footer------*/
     #footer {
-        height: 350px;
-    }
-
-    .mission {
-        width: 400px;
-    }
-
-    .bottom {
-        height: 350px;
-        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
-        align-items: center;
+        height: auto;
+    }
+
+    .connect h1{
+        font-size: 23px;
+    }
+
+    .service h1{
+        font-size: 23px;
+    }
+
+    .links h1{
+        font-size: 23px;
     }
 
     /*--------About Page---------*/
